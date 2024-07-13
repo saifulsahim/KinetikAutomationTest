@@ -8,6 +8,8 @@ public class kinetikAutomationMain {
 		script.isHomePageVisible();
 		script.addToCart();
 		script.viewCartAndCheckout();
+		script.createAccountAndVerification();
+
 
 	}
 
