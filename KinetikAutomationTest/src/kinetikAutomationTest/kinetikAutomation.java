@@ -41,11 +41,7 @@ public class kinetikAutomation {
 		driver.findElement(By.cssSelector(".modal-footer .btn-success")).click();
 	}
 	
-	/*
-	  5. Clicking cart button
-	  6. Verify that the cart page is displayed
-	  7. Clicking Proceed To Checkout
-	*/
+	
 	public void viewCartAndCheckout() {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(120));
 		driver.findElement(By.xpath("//a[@href='/view_cart']")).click();
@@ -67,7 +63,7 @@ public class kinetikAutomation {
 		driver.findElement(By.cssSelector("p.text-center a[href='/login']")).click();
 		driver.findElement(By.xpath("//input[@placeholder='Name']")).sendKeys("Test User");
 		WebElement emailInput = driver.findElement(By.cssSelector("input[data-qa='signup-email']"));
-		emailInput.sendKeys("sard@gmail.com");
+		emailInput.sendKeys("heelouserrr123@gmail.com");
 		driver.findElement(By.xpath("//button[contains(text(), 'Signup')]")).click();
 		driver.findElement(By.id("password")).sendKeys("password");
 		driver.findElement(By.id("days")).sendKeys("4");
@@ -87,7 +83,18 @@ public class kinetikAutomation {
 		driver.findElement(By.name("mobile_number")).sendKeys("1234567890");
 		driver.findElement(By.cssSelector("button[data-qa='create-account']")).click();
 
+		// Verification
+
+		WebElement accountCreated = driver.findElement(By.xpath("//b[contains(text(), 'Account Created!')]"));
+		if (accountCreated.isDisplayed()) {
+			System.out.println("ACCOUNT CREATED!");
+			driver.findElement(By.cssSelector(".btn.btn-primary")).click();
+		}
+		WebElement loggedInAs = driver.findElement(By.xpath("//a[contains(text(), 'Logged in as')]"));
+		System.out.println(loggedInAs);
+		if (loggedInAs.isDisplayed()) {
+			System.out.println("Logged in as username");
+		}
 
 	}
-
 }
