@@ -7,6 +7,7 @@ public class kinetikAutomationMain {
 		script.invokeBrowser();
 		script.isHomePageVisible();
 		script.addToCart();
+		script.viewCartAndCheckout();
 
 	}
 

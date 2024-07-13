@@ -40,6 +40,12 @@ public class kinetikAutomation {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(360));
 		driver.findElement(By.cssSelector(".modal-footer .btn-success")).click();
 	}
+	
+	/*
+	  5. Clicking cart button
+	  6. Verify that the cart page is displayed
+	  7. Clicking Proceed To Checkout
+	*/
 	public void viewCartAndCheckout() {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(120));
 		driver.findElement(By.xpath("//a[@href='/view_cart']")).click();
