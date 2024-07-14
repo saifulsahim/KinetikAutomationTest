@@ -5,8 +5,8 @@ This project automates a typical user journey on an eCommerce website using Sele
 # Test Scenario
 The script automates the following steps:
 
-Launch browser (Chrome)
-Navigate to URL 'http://automationexercise.com'
+1. Launch browser (Chrome)
+2. Navigate to URL 'http://automationexercise.com'
 Verify that the home page is visible successfully
 Add products to the cart
 Click the 'Cart' button
