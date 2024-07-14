@@ -7,12 +7,12 @@ The script automates the following steps:
 
 1. Launch browser (Chrome)
 2. Navigate to URL 'http://automationexercise.com'
-Verify that the home page is visible successfully
-Add products to the cart
-Click the 'Cart' button
-Verify that the cart page is displayed
-Click Proceed To Checkout
-Click the 'Register / Login' button
+3. Verify that the home page is visible successfully
+4. Add products to the cart
+5. Click the 'Cart' button
+6. Verify that the cart page is displayed
+7. Click Proceed To Checkout
+8. Click the 'Register / Login' button
 Fill all details in Sign up and create an account
 Verify 'ACCOUNT CREATED!' and click the 'Continue' button
 Verify 'Logged in as username' at top
