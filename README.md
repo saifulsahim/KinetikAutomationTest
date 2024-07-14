@@ -1,7 +1,8 @@
-ECommerce Automation
+# ECommerce Automation
+
 This project automates a typical user journey on an eCommerce website using Selenium in Java. The automation script covers various functionalities including adding products to the cart, user registration, and placing an order.
 
-Test Scenario
+# Test Scenario
 The script automates the following steps:
 
 Launch browser (Chrome)
