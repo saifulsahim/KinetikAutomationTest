@@ -2,6 +2,11 @@
 
 This project automates a typical user journey on an eCommerce website using Selenium in Java. The automation script covers various functionalities including adding products to the cart, user registration, and placing an order.
 
+## Project Structure
+
+- **src/**: Contains the source code.
+- **pom.xml**: Maven configuration file.
+
 # Test Scenario
 The script automates the following steps:
 
