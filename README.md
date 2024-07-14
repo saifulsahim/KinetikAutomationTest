@@ -13,13 +13,13 @@ The script automates the following steps:
 6. Verify that the cart page is displayed
 7. Click Proceed To Checkout
 8. Click the 'Register / Login' button
-Fill all details in Sign up and create an account
-Verify 'ACCOUNT CREATED!' and click the 'Continue' button
-Verify 'Logged in as username' at top
-Click the 'Cart' button
-Click the 'Proceed To Checkout' button
-Verify Address Details and Review Your Order
-Enter the description in a comment text area and click 'Place Order'
-Enter payment details: Name on Card, Card Number, CVC, Expiration date
-Click the 'Pay and Confirm Order' button
-Verify the success message 'Your order has been placed successfully!'
+9. Fill all details in Sign up and create an account
+10. Verify 'ACCOUNT CREATED!' and click the 'Continue' button
+11. Verify 'Logged in as username' at top
+12. Click the 'Cart' button
+13. Click the 'Proceed To Checkout' button
+14. Verify Address Details and Review Your Order
+15. Enter the description in a comment text area and click 'Place Order'
+16. Enter payment details: Name on Card, Card Number, CVC, Expiration date
+17. Click the 'Pay and Confirm Order' button
+18. Verify the success message 'Your order has been placed successfully!'
