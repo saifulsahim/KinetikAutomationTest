@@ -63,7 +63,7 @@ public class kinetikAutomation {
 		driver.findElement(By.cssSelector("p.text-center a[href='/login']")).click();
 		driver.findElement(By.xpath("//input[@placeholder='Name']")).sendKeys("Test User");
 		WebElement emailInput = driver.findElement(By.cssSelector("input[data-qa='signup-email']"));
-		emailInput.sendKeys("heesslouserrr123@gmail.com");
+		emailInput.sendKeys("hiiamdssd@gmail.com");
 		driver.findElement(By.xpath("//button[contains(text(), 'Signup')]")).click();
 		driver.findElement(By.id("password")).sendKeys("password");
 		driver.findElement(By.id("days")).sendKeys("4");
@@ -105,6 +105,40 @@ public class kinetikAutomation {
 	public void viewCartToCheckoutAgain() {
 		driver.findElement(By.xpath("//a[@href='/view_cart']")).click();
 		driver.findElement(By.xpath("//a[contains(text(), 'Proceed To Checkout')]")).click();
+
+	}
+	/*
+	 * 14.Verify Address Details and Review Your Order
+	 * 15.Enter the description in a comment text area and click 'Place Order'
+	 * 16. Enter payment details: Name on Card, Card Number, CVC, Expiration date
+	 * 17. Click the 'Pay and Confirm Order' button
+	 * 18. Verify the success message 'Your order has been placed successfully!'
+	 */
+
+	public void updateBillingInfoAndPlaceOrder() {
+
+		WebElement addressDetails = driver.findElement(By.xpath("//h2[contains(text(), 'Address Details')]"));
+		WebElement reviewOrder = driver.findElement(By.xpath("//h2[contains(text(), 'Review Your Order')]"));
+		if (addressDetails.isDisplayed() && reviewOrder.isDisplayed()) {
+			System.out.println("Address Details and Review Your Order are visible");
+		}
+		// Place Order
+		driver.findElement(By.name("message")).sendKeys("Please deliver between 9 AM and 5 PM");
+		driver.findElement(By.xpath("//a[contains(text(), 'Place Order')]")).click();
+
+		// payment details
+		driver.findElement(By.name("name_on_card")).sendKeys("Test User");
+		driver.findElement(By.name("card_number")).sendKeys("1111222233334444");
+		driver.findElement(By.name("cvc")).sendKeys("123");
+		driver.findElement(By.name("expiry_month")).sendKeys("12");
+		driver.findElement(By.name("expiry_year")).sendKeys("2025");
+		driver.findElement(By.cssSelector("button[data-qa='pay-button']")).click();
+
+		WebElement successMessage = driver.findElement(By.xpath("//b[contains(text(), 'Order Placed!')]"));
+		if (successMessage.isDisplayed()) {
+			System.out.println("Your order has been placed successfully!");
+		}
+		driver.quit();
 
 	}
 }

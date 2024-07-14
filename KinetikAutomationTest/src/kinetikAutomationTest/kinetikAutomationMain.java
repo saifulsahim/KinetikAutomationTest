@@ -10,6 +10,7 @@ public class kinetikAutomationMain {
 		script.viewCartAndCheckout();
 		script.createAccountAndVerification();
 		script.viewCartToCheckoutAgain();
+		script.updateBillingInfoAndPlaceOrder();
 
 	}
 
