@@ -1,6 +1,13 @@
-# ECommerce Automation
+# Automation Script
 
 This project automates a typical user journey on an eCommerce website using Selenium in Java. The automation script covers various functionalities including adding products to the cart, user registration, and placing an order.
+
+## Tools
+
+- Java 8 or higher
+- Maven
+- ChromeDriver
+
 
 ## Project Structure
 
@@ -28,3 +35,9 @@ The script automates the following steps:
 16. Enter payment details: Name on Card, Card Number, CVC, Expiration date
 17. Click the 'Pay and Confirm Order' button
 18. Verify the success message 'Your order has been placed successfully!'
+
+## Dependencies
+
+- Selenium
+- WebDriverManager
+
