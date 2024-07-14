@@ -63,7 +63,7 @@ public class kinetikAutomation {
 		driver.findElement(By.cssSelector("p.text-center a[href='/login']")).click();
 		driver.findElement(By.xpath("//input[@placeholder='Name']")).sendKeys("Test User");
 		WebElement emailInput = driver.findElement(By.cssSelector("input[data-qa='signup-email']"));
-		emailInput.sendKeys("heelouserrr123@gmail.com");
+		emailInput.sendKeys("heesslouserrr123@gmail.com");
 		driver.findElement(By.xpath("//button[contains(text(), 'Signup')]")).click();
 		driver.findElement(By.id("password")).sendKeys("password");
 		driver.findElement(By.id("days")).sendKeys("4");
@@ -95,6 +95,16 @@ public class kinetikAutomation {
 		if (loggedInAs.isDisplayed()) {
 			System.out.println("Logged in as username");
 		}
+
+	}
+	/* 12. Click the 'Cart' button
+	 * 13. Click the 'Proceed To Checkout' button
+	 * 
+	 */
+
+	public void viewCartToCheckoutAgain() {
+		driver.findElement(By.xpath("//a[@href='/view_cart']")).click();
+		driver.findElement(By.xpath("//a[contains(text(), 'Proceed To Checkout')]")).click();
 
 	}
 }
