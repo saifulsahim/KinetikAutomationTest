@@ -63,8 +63,9 @@ public class kinetikAutomation {
 		driver.findElement(By.cssSelector("p.text-center a[href='/login']")).click();
 		driver.findElement(By.xpath("//input[@placeholder='Name']")).sendKeys("Test User");
 		WebElement emailInput = driver.findElement(By.cssSelector("input[data-qa='signup-email']"));
-		emailInput.sendKeys("hiiamdssd@gmail.com");
+		emailInput.sendKeys("onlyuser@gmail.com");
 		driver.findElement(By.xpath("//button[contains(text(), 'Signup')]")).click();
+		driver.findElement(By.xpath("//input[@value='Mr']")).click();
 		driver.findElement(By.id("password")).sendKeys("password");
 		driver.findElement(By.id("days")).sendKeys("4");
 		driver.findElement(By.id("months")).sendKeys("April");
@@ -110,20 +111,27 @@ public class kinetikAutomation {
 	/*
 	 * 14.Verify Address Details and Review Your Order
 	 * 15.Enter the description in a comment text area and click 'Place Order'
-	 * 16. Enter payment details: Name on Card, Card Number, CVC, Expiration date
-	 * 17. Click the 'Pay and Confirm Order' button
-	 * 18. Verify the success message 'Your order has been placed successfully!'
 	 */
 
-	public void updateBillingInfoAndPlaceOrder() {
+	public void verifyAddressDetailsAndReviewOrder() {
 
 		WebElement addressDetails = driver.findElement(By.xpath("//h2[contains(text(), 'Address Details')]"));
 		WebElement reviewOrder = driver.findElement(By.xpath("//h2[contains(text(), 'Review Your Order')]"));
 		if (addressDetails.isDisplayed() && reviewOrder.isDisplayed()) {
 			System.out.println("Address Details and Review Your Order are visible");
 		}
+		
+
+	}
+	/*
+	 * 16. Enter payment details: Name on Card, Card Number, CVC, Expiration date
+	 * 17. Click the 'Pay and Confirm Order' button
+	 * 18. Verify the success message 'Your order has been placed successfully!
+	 */
+
+	public void placeOrder() {
 		// Place Order
-		driver.findElement(By.name("message")).sendKeys("Please deliver between 9 AM and 5 PM");
+		driver.findElement(By.name("message")).sendKeys("Please deliver on Friday");
 		driver.findElement(By.xpath("//a[contains(text(), 'Place Order')]")).click();
 
 		// payment details
@@ -138,7 +146,7 @@ public class kinetikAutomation {
 		if (successMessage.isDisplayed()) {
 			System.out.println("Your order has been placed successfully!");
 		}
-		driver.quit();
-
+		//driver.quit();
 	}
+
 }
