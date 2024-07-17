@@ -11,7 +11,6 @@ This project automates a typical user journey on an eCommerce website using Sele
 ## Project Structure
 
 - **src/**: Contains the source code.
-- **pom.xml**: Maven configuration file.
 
 # Test Scenario
 The script automates the following steps:
