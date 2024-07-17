@@ -5,7 +5,6 @@ This project automates a typical user journey on an eCommerce website using Sele
 ## Tools
 
 - Java 8 or higher
-- Maven
 - ChromeDriver
 
 
