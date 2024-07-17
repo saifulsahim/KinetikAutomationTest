@@ -146,7 +146,7 @@ public class kinetikAutomation {
 		if (successMessage.isDisplayed()) {
 			System.out.println("Your order has been placed successfully!");
 		}
-		//driver.quit();
+		driver.quit();
 	}
 
 }
